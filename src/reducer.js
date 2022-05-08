@@ -1,22 +1,37 @@
+import { stat } from "fs";
+
 export const initialState = {
-    basket : [],
+    basket: [],
+    user: null
 };
+export const getBasketTotal = (basket) => (
+    basket?.reduce((amount, item) => item.price + amount, 0)
+);
 
-function reducer(state,action){
-    switch(action.type){
-        case "ADD_TO_BASKET":
-            //LOGIC FOR ADDING ITEMS TO BASKET
-            break;
-
-        case "REMOVE_FROM_BASKET" :
-            //LOGIC FOR REMOVING ITEMS FROM BASKET
-            break;
+const reducer = (state, action) => {
+    console.log(action);
+    switch (action.type) {
+        case 'ADD_TO_BASKET':
+            return {
+                ...state,
+                basket: [...state.basket, action.item]
+            }
+        case 'REMOVE_FROM_BASKET':
+            let newBasket = [...state.basket];
+            const index = state.basket.findIndex((basketItem) =>
+                basketItem.id === action.id);
+            if (index >= 0) {
+                newBasket.splice(index, 1);
+            }
+            return { ...state, basket: newBasket }
+        case "ADD_USER":
+            return {
+                ...state,
+                user : action.user
+            }
         default:
-            return state;   
+            return state;
     }
 }
 
 export default reducer;
-
-
-

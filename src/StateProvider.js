@@ -1,21 +1,15 @@
-// we need to track baskets
+import React, { createContext, useContext, useReducer } from 'react'
 
-import React , { Children, createContext , useContext , useReducer }
- from 'react';
-
+//data layer
 export const StateContext = createContext();
 
-//Build a provider
-
-export const StateProvider =({ reducer , initialState , childern }) =>(
-
-     <StateContext.Provider value = { useReducer ( reducer ,
-        initialState)}>
-        {Children}
+//provider
+export const StateProvider = ({ reducer, initialState, children }) =>(
+    <StateContext.Provider value={useReducer(reducer,initialState)}>
+        {children}
     </StateContext.Provider>
-);
+)
 
+//to use inside a component
 
 export const useStateValue = () => useContext(StateContext);
-
-

@@ -1,12 +1,17 @@
-npm install -g firebase-tools
+Amazon clone using react
 
- npm install react-router-dom@v5
+Followed a youtube tutorial - https://www.youtube.com/watch?v=1_IYL9ZMR_Y&t=1460s, Thanks to them!
 
-https://mui.com/material-ui/getting-started/installation/
- npm i @mui/material
-npm install @mui/icons-material
+Built Home, Checkout, Cart and Login pages using react Functional Components and React Context API.
+
+Checkout the project here -> [Amazon Clone](https://amazn-clone-1993.web.app/)
+
+Add items to basket and nagivate to checkout page.
+
+Download the project
+run #npm install
+
+#npm start
 
 
-3;06:12
-
- 
+*Developed and used Amazon Logo and name to practice react.

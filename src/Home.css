@@ -1,21 +1,15 @@
 .home{
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1300px;
+    margin: 0 auto;
 }
-.home_image{
-    width: 100%;
-    mask-image: linear-gradient( to bottom,rgba(0,0,0,1) , rgba(0,0,0,0));
+.home__image{
+    width:100%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1),rgba(0,0,0,0));
     z-index: -1;
     margin-bottom: -150px;
 }
-
-.home_row{
-    display: flex;
+.home__row{
+    display:flex;
     z-index: 1;
-    margin-left: 5px;
-    margin-right: 5px;
-    /* max-width: 100%; */
+    margin:0 5px;
 }
-
-
